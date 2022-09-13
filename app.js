@@ -1,6 +1,11 @@
 function printerError(s) {
-    // your code
-    return s.length
+    let myNum = 0;
+    for (var i = 0; i < s.length; i++) {
+        if (s.charCodeAt(i) > 109) {
+            myNum = myNum + 1;
+        }
+    }
+    return myNum + "/" + s.length;
 }
 
-console.log("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz"); //3/56
+console.log(printerError("aaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbmmmmmmmmmmmmmmmmmmmxyz")); //3/56
